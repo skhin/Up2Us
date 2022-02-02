@@ -1,0 +1,12 @@
+{
+  "name": "up2us",
+  "version": "1.0.0",
+  "description": "An app that helps solve the most annoying question of all time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
