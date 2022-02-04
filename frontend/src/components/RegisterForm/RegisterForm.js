@@ -34,6 +34,7 @@ const RegisterForm = () => {
             <h1>REGISTER</h1>
             <Form.Item
               name="userName"
+              className="userName"
               label="User Name"
               rules={[
                 { required: true, message: "Please input your username" },
@@ -44,6 +45,7 @@ const RegisterForm = () => {
 
             <Form.Item
               name="email"
+              className="email"
               label="Email"
               rules={[
                 { type: "email", message: "Please enter a valid Email" },
@@ -55,6 +57,7 @@ const RegisterForm = () => {
 
             <Form.Item
               name="password"
+              className="password"
               label="Password"
               rules={[
                 { required: true, message: "Please enter your password" },
@@ -64,7 +67,12 @@ const RegisterForm = () => {
             </Form.Item>
             <br />
             <Form.Item>
-              <Button type="primary" htmlType="submit" loading={loading}>
+              <Button
+                className="register-button"
+                type="primary"
+                htmlType="submit"
+                loading={loading}
+              >
                 REGISTER
               </Button>
             </Form.Item>

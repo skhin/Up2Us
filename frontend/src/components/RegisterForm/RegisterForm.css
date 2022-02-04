@@ -12,16 +12,31 @@
 }
 
 .registerBox {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(158, 154, 154, 0.24) 3px 3px 8px;
   border-radius: 5px;
-  padding: 50px;
+  padding: 60px;
+  font-size: 20px;
 }
 
 .registerForm form p {
   color: #777;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .registerForm form p a:hover {
   text-decoration: underline;
+}
+
+.register-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.email,
+.userName {
+  margin-bottom: 15px;
+}
+
+.userName {
+  margin-top: 20px;
 }
