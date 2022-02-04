@@ -1,0 +1,27 @@
+.registerForm {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerForm form h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.registerBox {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 50px;
+}
+
+.registerForm form p {
+  color: #777;
+  font-size: 14px;
+}
+
+.registerForm form p a:hover {
+  text-decoration: underline;
+}
