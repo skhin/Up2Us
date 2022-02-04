@@ -30,6 +30,12 @@ export const routes = {
     component: lazy(() => import("../pages/Login/LoginPage")),
     type: ProtectedRoute,
   },
+  register: {
+    name: "Register",
+    path: "/register",
+    component: lazy(() => import("../pages/Register/RegisterPage")),
+    type: ProtectedRoute,
+  },
 };
 
 export const renderRoutes = Object.entries(routes);
