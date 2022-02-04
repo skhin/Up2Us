@@ -1,0 +1,30 @@
+.question_one h1 {
+  padding: 20px;
+  font-size: 25px;
+}
+
+.occasion_bx {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+
+.occasion_bx h1 {
+  padding-bottom: 10px;
+}
+
+.occasion {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  width: fit-content;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.occasion img {
+  margin-right: 50px;
+}

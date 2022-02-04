@@ -36,6 +36,18 @@ export const routes = {
     component: lazy(() => import("../pages/Register/RegisterPage")),
     type: ProtectedRoute,
   },
+  userSetting: {
+    name: "UserSetting",
+    path: "/usersetting",
+    component: lazy(() => import("../pages/User/UserPage")),
+    type: PrivateRoute,
+  },
+  question: {
+    name: "QuestionPage",
+    path: "/question",
+    component: lazy(() => import("../pages/Question/QuestionPage")),
+    type: PrivateRoute,
+  },
 };
 
 export const renderRoutes = Object.entries(routes);
