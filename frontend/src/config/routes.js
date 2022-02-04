@@ -2,7 +2,6 @@ import { lazy } from "react";
 import PrivateRoute from "./PrivateRoute";
 import ProtectedRoute from "./ProtectedRoute";
 import { Route } from "react-router-dom";
-import { LayoutContext } from "antd/lib/layout/layout";
 
 export const routes = {
   home: {
@@ -46,6 +45,60 @@ export const routes = {
     name: "QuestionPage",
     path: "/question",
     component: lazy(() => import("../pages/Question/QuestionPage")),
+    type: PrivateRoute,
+  },
+  result: {
+    name: "ResultPage",
+    path: "/result",
+    component: lazy(() => import("../pages/Result/ResultPage")),
+    type: PrivateRoute,
+  },
+  dininghistory: {
+    name: "DiningHistory",
+    path: "/dininghistory",
+    component: lazy(() => import("../pages/DiningHistory/DiningHistory")),
+    type: PrivateRoute,
+  },
+  visitedlocation: {
+    name: "VisitedLocation",
+    path: "/visitedlocation",
+    component: lazy(() => import("../pages/VisitedLocations/VisitedLocations")),
+    type: PrivateRoute,
+  },
+  dietpreference: {
+    name: "dietPreference",
+    path: "/dietpreference",
+    component: lazy(() => import("../pages/DietPreference/DietPreference")),
+    type: PrivateRoute,
+  },
+  dietaryrestriction: {
+    name: "dietaryrestriction",
+    path: "/dietaryrestriction",
+    component: lazy(() => import("../pages/DietRestriction/DietRestriction")),
+    type: PrivateRoute,
+  },
+  favcuisine: {
+    name: "favcuisine",
+    path: "/favcuisine",
+    component: lazy(() => import("../pages/FavCuisine/FavCuisine")),
+    type: PrivateRoute,
+  },
+  nonfavcuisine: {
+    name: "nonfavcuisine",
+    path: "/nonfavcuisine",
+    component: lazy(() => import("../pages/NonFavCuisine/NonFavCuisine")),
+    type: PrivateRoute,
+  },
+  favestab: {
+    name: "favestab",
+    path: "/favestab",
+    component: lazy(() => import("../pages/FavEstablishment/FavEstablishment")),
+    type: PrivateRoute,
+  },
+  blacklist: {
+    name: "blacklist",
+    path: "/blacklist",
+    component: lazy(() => import("../pages/Blacklist/Blacklist")),
     type: PrivateRoute,
   },
 };

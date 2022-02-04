@@ -1,0 +1,19 @@
+.dietPref .title h1 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 20px;
+}
+
+.diet_card {
+  background: #a23efd;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  margin: 0 30px;
+}
+
+.diet_card h1 {
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 35px;
+}

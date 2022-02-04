@@ -1,0 +1,28 @@
+.user_setting .title h1 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.locationWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.location {
+  background: #6d67ca;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px !important;
+}
+
+.location h1 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+
+.add_review .ant-btn {
+  margin-top: 10px;
+}
