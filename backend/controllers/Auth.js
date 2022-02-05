@@ -1,20 +1,19 @@
-const User = require("../model/UserSchema");
+const Users = require("../model/UserSchema");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const Users = require("../model/UserSchema");
 
 //REGISTER USER
 
 exports.signup = async (req, res) => {
   try {
-    const userExist = await User.findOne({ email: req.body.email });
+    const userExist = await Users.findOne({ email: req.body.email });
     if (userExist) {
       return res.status(400).json({ message: "Email already exists" });
     }
     const { userName, password, email } = req.body;
     const hash_password = await bcrypt.hash(password, 6);
 
-    const newUser = new User({ userName, hash_password, email });
+    const newUser = new Users({ userName, hash_password, email });
 
     await newUser.save(0);
     res.status(201).json({ message: "User Registration Success" });
@@ -29,7 +28,7 @@ exports.signup = async (req, res) => {
 
 exports.signin = async (req, res) => {
   try {
-    const user = await User.findOne({ email: req.body.email });
+    const user = await Users.findOne({ email: req.body.email });
     if (user) {
       const isMatch = await bcrypt.compare(
         req.body.password,
@@ -41,6 +40,7 @@ exports.signin = async (req, res) => {
         });
 
         const { _id, userName, email } = user;
+
         res.cookie("token", token, { expiresIn: "1d" });
         res.status(200).json({ token, user: { _id, userName, email } });
       } else {
