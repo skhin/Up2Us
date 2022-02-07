@@ -39,7 +39,7 @@ const UserPage = () => {
               onClick={() => history.push("/dininghistory")}
               className="dinning_history"
             >
-              <h1>Dinning History</h1>
+              <h1>Dining History</h1>
               <img src={historyImg} alt="history" />
             </Col>
           </Row>
