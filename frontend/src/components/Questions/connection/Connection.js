@@ -18,6 +18,7 @@ const Connection = ({ setQNumber, establishment, setEstablishment }) => {
         <div className="total_pax">
           <h3>Total Pax</h3>
           <Input
+            className="input_num"
             type="number"
             onChange={(e) =>
               setEstablishment({ ...establishment, totalPax: e.target.value })
@@ -28,10 +29,16 @@ const Connection = ({ setQNumber, establishment, setEstablishment }) => {
           />
         </div>
         <div className="conn_btn">
-          <Button onClick={() => setQNumber(3)} type="primary" size="large">
+          <Button
+            className="conn_pri"
+            onClick={() => setQNumber(3)}
+            type="primary"
+            size="large"
+          >
             BACK
           </Button>
           <Button
+            className="conn_pri"
             onClick={() =>
               history.push(
                 `/result/?totalPax=${establishment.totalPax}&occasion=${establishment.occasion}&time=${establishment.time}&price=${establishment.price}`

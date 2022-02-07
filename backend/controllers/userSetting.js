@@ -21,7 +21,7 @@ exports.addHistory = async (req, res) => {
 
       if (!doesExist) {
         await UserSetting.findOneAndUpdate(
-          { userId: req.bpdy.userId },
+          { userId: req.body.userId },
           {
             $push: {
               restaurants: req.body.restaurants,
@@ -111,7 +111,7 @@ exports.addReview = async (req, res) => {
 // GET DIETARY RESTRICTION
 //////////////////////////////
 
-exports.getDietRest = async (req, res) => {
+exports.getOptions = async (req, res) => {
   try {
     const options = await DietRest.findOne({ userId: req.params.id });
     if (options) {
@@ -221,6 +221,8 @@ exports.nonFavCuisine = async (req, res) => {
       res.status(200).json({ message: "NON FAV CUISINE ADDED" });
     }
   } catch (error) {
+    console.log("error1", error);
+
     res
       .status(500)
       .json(

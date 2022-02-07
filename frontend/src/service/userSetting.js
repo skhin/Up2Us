@@ -21,7 +21,7 @@ function saveDietRest(data) {
 }
 
 function getOption(id) {
-  return axios.get(`user/getdietrestriction/${id}`);
+  return axios.get(`user/getoption/${id}`);
 }
 
 function saveFavCuisine(data) {

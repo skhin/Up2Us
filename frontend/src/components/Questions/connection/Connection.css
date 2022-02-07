@@ -14,16 +14,44 @@
 
 .total_pax {
   padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .total_pax .ant-input {
   width: 150px;
 }
 
+h3 {
+  margin-right: 40px;
+}
+
+.input_num {
+  text-align: center;
+  font-size: 30px;
+}
+
 .conn_btn {
   padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .conn_btn .ant-btn {
   margin-right: 50px;
+}
+
+.conn_pri {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px 60px 10px 60px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.conn_pri:hover {
+  background-color: rgb(116, 116, 212);
+  color: wheat;
 }

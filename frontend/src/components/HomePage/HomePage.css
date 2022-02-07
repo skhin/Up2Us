@@ -39,3 +39,16 @@
 .letsgo_desc .ant-btn-primary {
   margin-top: 10px;
 }
+
+.home__btn {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px 60px 10px 60px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.home__btn:hover {
+  background-color: rgb(116, 116, 212);
+  color: wheat;
+}

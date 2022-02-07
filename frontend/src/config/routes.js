@@ -71,9 +71,9 @@ export const routes = {
     component: lazy(() => import("../pages/DietPreference/DietPreference")),
     type: PrivateRoute,
   },
-  dietaryrestriction: {
-    name: "dietaryrestriction",
-    path: "/dietaryrestriction",
+  dietrestriction: {
+    name: "dietrestriction",
+    path: "/dietrestriction",
     component: lazy(() => import("../pages/DietRestriction/DietRestriction")),
     type: PrivateRoute,
   },

@@ -34,7 +34,7 @@ const dietaryList = [
   },
   {
     id: "5",
-    name: "VEGITERIAN",
+    name: "VEGETARIAN",
     img: pic2,
   },
   {
@@ -71,7 +71,7 @@ const DietRestriction = () => {
 
   const handleSave = async () => {
     const ids = option.map((o) => o.itemId);
-    const filtered = option.filteer(
+    const filtered = option.filter(
       ({ itemId }, index) => !ids.includes(itemId, index + 1)
     );
     setIsLoading(true);
@@ -124,7 +124,7 @@ const DietRestriction = () => {
       </div>
 
       <div className="dietHeader">
-        <h1>Dietry Preference</h1>
+        <h1>Dietary Preference</h1>
         <p>Select from the options below your list of dietary preferences</p>
       </div>
 
@@ -150,6 +150,7 @@ const DietRestriction = () => {
           </div>
           <div style={{ textAlign: "center" }}>
             <Button
+              className="diet_btn"
               size="large"
               type="primary"
               loading={isLoading}

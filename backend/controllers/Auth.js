@@ -1,23 +1,25 @@
-const Users = require("../model/UserSchema");
+const User = require("../model/UserSchema");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 //REGISTER USER
 
 exports.signup = async (req, res) => {
+  console.log(req.body);
   try {
-    const userExist = await Users.findOne({ email: req.body.email });
+    const userExist = await User.findOne({ email: req.body.email });
     if (userExist) {
       return res.status(400).json({ message: "Email already exists" });
     }
     const { userName, password, email } = req.body;
     const hash_password = await bcrypt.hash(password, 6);
 
-    const newUser = new Users({ userName, hash_password, email });
+    const newUser = new User({ userName, hash_password, email });
 
     await newUser.save(0);
     res.status(201).json({ message: "User Registration Success" });
   } catch (error) {
+    console.log(error);
     res
       .status(500)
       .json({ message: "Something went wrong with User Registration" + error });
@@ -27,8 +29,9 @@ exports.signup = async (req, res) => {
 // LOGIN USER
 
 exports.signin = async (req, res) => {
+  console.log(req.body);
   try {
-    const user = await Users.findOne({ email: req.body.email });
+    const user = await User.findOne({ email: req.body.email });
     if (user) {
       const isMatch = await bcrypt.compare(
         req.body.password,
@@ -50,6 +53,7 @@ exports.signin = async (req, res) => {
       res.status(400).json({ message: "Sign In Invalid" });
     }
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Something went wrong with LOG IN" });
   }
 };

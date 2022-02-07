@@ -3,6 +3,7 @@ import "./Result.css";
 import { Button } from "antd";
 import historyServ from "../../../service/userSetting";
 import { useHistory } from "react-router-dom";
+import { restaurent } from "../../../restaurant/restaurant";
 
 const Result = ({ restaurant, setResult, quesAns }) => {
   const [restaurantDetail, setRestaurantDetail] = useState([]);
@@ -12,55 +13,58 @@ const Result = ({ restaurant, setResult, quesAns }) => {
     const user = JSON.parse(localStorage.getItem("user"));
     try {
       const favCuisine = await historyServ.getFavCuisine(user._id);
-      const dietRest = await historyServ.getOption(user._id);
-      // const nonFavCuisine = await historyServ.getNonFavCuisine(user._id)
+      // const dietRest = await historyServ.getOption(user._id);
+      // const nonFavCuisine = await historyServ.getNonFavCuisine(user._id);
 
       // FILTER RESULTS BASED ON USER SELECTION IN THE DIETARY PREFERENCES
 
-      if (dietRest.length === 0) {
-        // console.log('no diet restriction);
-        const filterbyDietRest = restaurant.filter(
-          (item) => item.dietaryRestrictions.length === 0
-        );
-        const filterByFavCuisine = filterbyDietRest.filter((item) =>
-          item.cuisine.some((data) =>
-            favCuisine.some((favC) => favC.favCuisine === data)
-          )
-        );
+      // if (dietRest.length === 0) {
+      //   // console.log('no diet restriction);
+      //   console.log(dietRest);
+      const filterbyDietRest = restaurent.filter(
+        (item) => item.dietaryRestrictions.length === 0
+      );
+      const filterByFavCuisine = filterbyDietRest.filter((item) =>
+        item.cuisine.some((data) =>
+          favCuisine.some((favC) => favC.favCuisine === data)
+        )
+      );
 
-        const filterByOcc = filterByFavCuisine.filter((item) =>
-          item.occasion.some((occ) => occ === quesAns.occasion)
-        );
-        // console.log(filterByOcc);
+      const filterByOcc = filterByFavCuisine.filter((item) =>
+        item.occasion.some((occ) => occ === quesAns.occasion)
+      );
+      console.log(filterByOcc);
 
-        const filterByPrice = filterByOcc.filter(
-          (item) => item.price === quesAns.price
-        );
-        // console.log(filterByPrice)
-        setRestaurantDetail(filterByPrice);
-      } else if (dietRest.length > 0) {
-        // console.log('have diet restiction')
-        const filterbyDietRest = restaurant.filter((item) =>
-          item.dietaryRestrictions.some((data) =>
-            dietRest.some((favC) => favC.dietName === data)
-          )
-        );
-        const filterByFavCuisine = filterbyDietRest((item) =>
-          item.cuisine.some((data) =>
-            favCuisine.some((favC) => favC.favCuisine === data)
-          )
-        );
+      const filterByPrice = filterByOcc.filter(
+        (item) => item.price === quesAns.price
+      );
+      console.log(filterByPrice);
+      setRestaurantDetail(filterByPrice);
+      // } else if (dietRest.length > 0) {
+      //   console.log("have diet restiction");
+      //   const filterbyDietRest = restaurent.filter((item) =>
+      //     item.dietaryRestrictions.some((data) =>
+      //       dietRest.some((favC) => favC.dietName === data)
+      //     )
+      //   );
+      //   const filterByFavCuisine = filterbyDietRest.filter((item) =>
+      //     item.cuisine.some((data) =>
+      //       favCuisine.some((favC) => favC.favCuisine === data)
+      //     )
+      //   );
 
-        const filterByOcc = filterByFavCuisine.filter((item) =>
-          item.occasion.some((occ) => occ === quesAns.occasion)
-        );
+      //   const filterByOcc = filterByFavCuisine.filter((item) =>
+      //     item.occasion.some((occ) => occ === quesAns.occasion)
+      //   );
+      //   // console.log(filterByOcc);
 
-        const filterByPrice = filterByOcc.filter(
-          (item) => item.price === quesAns.price
-        );
+      //   const filterByPrice = filterByOcc.filter(
+      //     (item) => item.price === quesAns.price
+      //   );
+      //   // console.log(filterByPrice);
 
-        setRestaurantDetail(filterByPrice);
-      }
+      //   setRestaurantDetail(filterByPrice);
+      // }
     } catch (error) {
       console.log(error);
     }
@@ -106,26 +110,37 @@ const Result = ({ restaurant, setResult, quesAns }) => {
       {restaurantDetail.length === 0 ? (
         <p style={{ textAlign: "center" }}>
           Sorry. No establishment found. Please refine your selection!{" "}
-          <a onClick={() => history.push("/question")}>Try again?</a>
+          <a className="try" onClick={() => history.push("/question")}>
+            Try again?
+          </a>
         </p>
       ) : (
         <div className="res_container">
           <div>
-            <p>{restaurantDetail[0]?.name}</p>
-            <p>{restaurantDetail[0]?.address}</p>
+            <p className="detail">{restaurantDetail[0]?.name}</p>
+            <p className="detail">{restaurantDetail[0]?.address}</p>
             <p>
-              <strong>Time: </strong> {quesAns.time}
+              <strong>Time: </strong>{" "}
+              <span className="time">{quesAns.time}</span>
             </p>
             <p>
-              <strong>Total pax: </strong> {quesAns.totalPax}
+              <strong>Total pax: </strong>{" "}
+              <span className="time">{quesAns.totalPax}</span>
             </p>
           </div>
 
           <div className="res_btn">
-            <Button onClick={handleEstablishment} type="primary" size="large">
+            <Button
+              className="res_pri"
+              onClick={handleEstablishment}
+              type="primary"
+              size="large"
+              handleEstablishment={handleEstablishment}
+            >
               Select this <br /> establishment
             </Button>
             <Button
+              className="res_pri"
               onClick={() => history.push("/question")}
               type="primary"
               size="large"

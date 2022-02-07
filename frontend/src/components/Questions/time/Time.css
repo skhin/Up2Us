@@ -41,3 +41,16 @@
 .price_btn .ant-btn {
   margin: 0 30px;
 }
+
+.time_pri {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px 60px 10px 60px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.time_pri:hover {
+  background-color: rgb(116, 116, 212);
+  color: wheat;
+}

@@ -29,7 +29,8 @@ const HomePage = () => {
           <h1>ARE YOU READY?</h1>
           <p>Click the button below to begin your culinary adventure</p>
           <Button
-            onClick={() => history.push("/dietaryrestriction")}
+            className="home__btn"
+            onClick={() => history.push("/dietrestriction")}
             size="large"
             type="primary"
           >

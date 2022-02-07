@@ -12,7 +12,9 @@
 }
 
 .diet_preference {
+  cursor: pointer;
   background: #16a085;
+  margin-bottom: 80px;
 }
 
 .dining_history {
@@ -27,4 +29,16 @@
 .userOptions img {
   width: 200px;
   height: 150px;
+}
+
+.visRes {
+  width: 800px;
+}
+
+.thumbsUp {
+  width: 600px;
+}
+
+.thumbsdown {
+  width: 500px;
 }

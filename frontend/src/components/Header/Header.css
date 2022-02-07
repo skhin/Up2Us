@@ -21,6 +21,12 @@
 
 .header ul li a {
   margin: 0 50px;
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 600;
+  text-decoration: none;
+  color: #090043;
+}
+
+.header ul li a:hover {
+  color: rgb(156, 11, 11);
 }

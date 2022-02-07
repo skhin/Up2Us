@@ -7,7 +7,7 @@ import pic2 from "../../assets/images/nfc/pic2.jpg";
 import pic3 from "../../assets/images/nfc/pic3.jpg";
 import pic4 from "../../assets/images/nfc/pic4.jpg";
 import pic5 from "../../assets/images/nfc/pic5.jpg";
-import pic6 from "../../assets/images/nfc/pic6.jpg";
+
 import pic7 from "../../assets/images/nfc/pic7.jpg";
 import pic8 from "../../assets/images/nfc/pic8.jpg";
 import pic9 from "../../assets/images/nfc/pic9.jpg";
@@ -17,7 +17,7 @@ import pic12 from "../../assets/images/nfc/pic12.jpg";
 import pic13 from "../../assets/images/nfc/pic13.jpg";
 import pic14 from "../../assets/images/nfc/pic14.jpg";
 import pic15 from "../../assets/images/nfc/pic15.jpg";
-import pic16 from "../../assets/images/nfc/pic16.jpg";
+
 import pic17 from "../../assets/images/nfc/pic17.jpg";
 import pic18 from "../../assets/images/nfc/pic18.jpg";
 import pic19 from "../../assets/images/nfc/pic19.jpg";
@@ -37,12 +37,12 @@ const favCuisineData = [
   {
     id: "2",
     name: "BRITISH",
-    img: pic2,
+    img: pic3,
   },
   {
     id: "3",
     name: "FUSION",
-    img: pic3,
+    img: pic2,
   },
   {
     id: "4",
@@ -57,7 +57,7 @@ const favCuisineData = [
   {
     id: "6",
     name: "INDIAN",
-    img: pic6,
+    img: pic2,
   },
   {
     id: "7",
@@ -107,7 +107,7 @@ const favCuisineData = [
   {
     id: "16",
     name: "ITALIAN",
-    img: pic16,
+    img: pic4,
   },
   {
     id: "17",
@@ -153,30 +153,50 @@ const favCuisineData = [
 
 const FavCuisine = () => {
   const user = JSON.parse(localStorage.getItem("user"));
-  const [option, setOption] = useState([]);
+  let [option, setOption] = useState([]);
   const [itemOption, setItemOption] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loading, setLoading] = useState(true);
   const history = useHistory();
 
   const onChange = (e) => {
+    const id = e.target.value;
     if (e.target.checked) {
-      setOption((prevail) => {
+      const cuisine = favCuisineData.filter((item) => item.id === id);
+      setOption((prev) => {
         return [
-          ...prevail,
+          ...prev,
           {
-            itemId: e.target.value,
-            favCuisine: favCuisineData((item) => item.id === e.target.value)
-              .name,
+            itemId: id,
+            favCuisine: cuisine.length == 1 ? cuisine[0].name : null,
           },
         ];
       });
     } else {
-      setOption([...option.filter((item) => item.itemId !== e.target.value)]);
+      setOption((prev) => {
+        return prev.filter((item) => item.itemId !== id);
+      });
     }
+    // if (e.target.checked) {
+    //   setOption((prevail) => {
+    //     return [
+    //       ...prevail,
+    //       {
+    //         itemId: e.target.value,
+    //         favCuisine: favCuisineData((item) => item.id === e.target.value)
+    //           .name,
+    //       },
+    //     ];
+    //   });
+    // } else {
+    //   setOption([...option.filter((item) => item.itemId !== e.target.value)]);
+    // }
   };
 
   const handleSave = async () => {
+    // option = favCuisineData.filter(item => item.checked)
+    console.log(option);
+
     if (option.length === 0) {
       message.warning("Please select at least one option");
       return false;
@@ -256,6 +276,7 @@ const FavCuisine = () => {
                 defaultChecked={item?.itemId ? true : false}
                 onChange={onChange}
                 value={item.id}
+                className="checkbox"
               >
                 {item.name}
               </Checkbox>
@@ -269,6 +290,7 @@ const FavCuisine = () => {
           type="primary"
           loading={isLoading}
           onClick={handleSave}
+          className="cuis_btn"
         >
           Next
         </Button>

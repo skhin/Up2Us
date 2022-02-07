@@ -1,7 +1,10 @@
 import React from "react";
 import "./DiningHistory.css";
 import { Row, Col } from "antd";
-import historyImg from "../../assets/images/history.jpg";
+
+import visRest from "../../assets/images/visRest.jpg";
+import thumbsUp from "../../assets/images/thumbsup.png";
+import thumbsDown from "../../assets/images/thumbsdown.jpeg";
 import { useHistory } from "react-router-dom";
 
 const DiningHistory = () => {
@@ -11,22 +14,22 @@ const DiningHistory = () => {
   return (
     <div className="user_setting">
       <div className="title">
-        <h1>{user.userName} settings - Dining history</h1>
+        <h1>{user.userName} Profile - Dining history</h1>
       </div>
       <Row>
         <Col span={16}>
-          <Row justify="center" gutter={[16, 16]}>
+          <Row justify="space-between">
             <Col
               xs={2}
               sm={4}
               md={6}
               lg={11}
-              xl={13}
+              xl={11}
               onClick={() => history.push("/visitedlocation")}
               className="dining_history"
             >
               <h1>Visited Location</h1>
-              <img src={historyImg} alt="history" />
+              <img src={visRest} alt="history" className="visRes" />
             </Col>
 
             <Col
@@ -34,12 +37,12 @@ const DiningHistory = () => {
               sm={4}
               md={6}
               lg={11}
-              xl={13}
+              xl={11}
               onClick={() => history.push("/favestab")}
               className="dinning_history"
             >
-              <h1>Favroite Establishment</h1>
-              <img src={historyImg} alt="history" />
+              <h1>Favourite Establishment</h1>
+              <img src={thumbsUp} alt="history" className="thumbsUp" />
             </Col>
 
             <Col
@@ -47,12 +50,12 @@ const DiningHistory = () => {
               sm={4}
               md={6}
               lg={11}
-              xl={13}
+              xl={11}
               onClick={() => history.push("/blacklist")}
               className="dining_history"
             >
-              <h1>Blacklist</h1>
-              <img src={historyImg} alt="history" />
+              <h1>Blacklisted Establishment</h1>
+              <img src={thumbsDown} alt="history" className="thumbsdown" />
             </Col>
           </Row>
         </Col>

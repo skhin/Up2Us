@@ -160,24 +160,27 @@ const NonFavCuisine = () => {
   const history = useHistory();
 
   const onChange = (e) => {
+    const id = e.target.value;
     if (e.target.checked) {
-      setOption((prevail) => {
+      const cuisine = nonFavCuisineData.filter((item) => item.id === id);
+      setOption((prev) => {
         return [
-          ...prevail,
+          ...prev,
           {
-            itemId: e.target.value,
-            nonFavCuisine: nonFavCuisineData(
-              (item) => item.id === e.target.value
-            ).name,
+            itemId: id,
+            nonFav: cuisine.length == 1 ? cuisine[0].name : null,
           },
         ];
       });
     } else {
-      setOption([...option.filter((item) => item.itemId !== e.target.value)]);
+      setOption((prev) => {
+        return prev.filter((item) => item.itemId !== id);
+      });
     }
   };
 
   const handleSave = async () => {
+    console.log(option);
     if (option.length === 0) {
       message.warning("Please select at least one option");
       return false;
@@ -261,6 +264,7 @@ const NonFavCuisine = () => {
                 defaultChecked={item?.itemId ? true : false}
                 onChange={onChange}
                 value={item.id}
+                className="checkbox"
               >
                 {item.name}
               </Checkbox>
@@ -274,6 +278,7 @@ const NonFavCuisine = () => {
           type="primary"
           loading={isLoading}
           onClick={handleSave}
+          className="cuis_btn"
         >
           Next
         </Button>

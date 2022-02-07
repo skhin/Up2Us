@@ -19,12 +19,25 @@
   padding: 10px;
 }
 
+p {
+  font-size: 30px;
+}
+
+.detail {
+  color: whitesmoke;
+  font-size: 40px;
+}
+
+.time {
+  color: whitesmoke;
+}
+
 .result_title {
   text-align: center;
 }
 
 .result_title h1 {
-  font-size: 25px;
+  font-size: 45px;
 }
 
 .res_btn .ant-btn {
@@ -37,4 +50,23 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+}
+
+.try {
+  color: rgb(86, 236, 86);
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.res_pri {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px 60px 10px 60px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.res_pri:hover {
+  background-color: rgb(116, 116, 212);
+  color: wheat;
 }

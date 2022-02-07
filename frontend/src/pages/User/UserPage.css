@@ -14,6 +14,7 @@
 .diet_preference {
   cursor: pointer;
   background: #16a085;
+  margin-bottom: 80px;
 }
 
 .dinning_history {

@@ -27,7 +27,7 @@ const UserPage = () => {
               onClick={() => history.push("/dietpreference")}
               className="diet_preference"
             >
-              <h1>Meal Prefereneces</h1>
+              <h1>Meal Preferences</h1>
               <img src={dietImg} alt="diet" />
             </Col>
             <Col
@@ -36,7 +36,7 @@ const UserPage = () => {
               md={6}
               lg={11}
               xl={11}
-              onClick={() => history.push("/dinninghistory")}
+              onClick={() => history.push("/dininghistory")}
               className="dinning_history"
             >
               <h1>Dinning History</h1>

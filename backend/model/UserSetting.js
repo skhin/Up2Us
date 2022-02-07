@@ -18,5 +18,4 @@ const UserSettingSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const UserSettings = mongoose.model("User", UserSchema);
-module.exports = UserSettings;
+module.exports = mongoose.model("UserSetting", UserSettingSchema);

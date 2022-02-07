@@ -8,10 +8,14 @@
 
 .reser_container h1 {
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .reservation .title h1 {
   padding: 20px;
   font-size: 25px;
+}
+
+.res-status {
+  color: whitesmoke;
 }

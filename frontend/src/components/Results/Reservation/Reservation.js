@@ -32,11 +32,14 @@ const Reservation = ({ restaurant, quesAns }) => {
           <h1>{isCancel ? "Cancel" : "Success"}</h1>
           <br />
           {isCancel ? (
-            <p>Your reservation has been cancelled at {restaurant.name}.</p>
+            <p className="res-status">
+              Your reservation has been cancelled at {restaurant.name}.
+            </p>
           ) : (
-            <p>
-              Your reservation has been confirmed at {restaurant.name}. Please
-              arrive 10min before the scheduled time
+            <p className="res-status">
+              Your reservation has been confirmed at {restaurant.name}.
+              <br />
+              Please arrive 10min before the scheduled time
             </p>
           )}
           <br />

@@ -33,6 +33,7 @@ const Price = ({ setQNumber, setEstablishment, establishment }) => {
 
   // MOVE TO NEXT QUESTION
   const handleNextQuestion = () => {
+    console.log(activePrice);
     if (activePrice) {
       setQNumber(3);
     } else {
@@ -56,7 +57,7 @@ const Price = ({ setQNumber, setEstablishment, establishment }) => {
             >
               <h1
                 style={{
-                  fontSize: `${activePrice === item.id ? "22px" : "30px"}`,
+                  fontSize: `${activePrice === item.id ? "65px" : "45px"}`,
                   color: `${activePrice === item.id ? "#2ecc71" : ""}`,
                 }}
               >
@@ -66,10 +67,20 @@ const Price = ({ setQNumber, setEstablishment, establishment }) => {
           ))}
         </div>
         <div className="price_btn">
-          <Button onClick={() => setQNumber(1)} type="primary" size="large">
+          <Button
+            className="price_pri"
+            onClick={() => setQNumber(1)}
+            type="primary"
+            size="large"
+          >
             Back
           </Button>
-          <Button onClick={handleNextQuestion} type="primary" size="large">
+          <Button
+            className="price_pri"
+            onClick={handleNextQuestion}
+            type="primary"
+            size="large"
+          >
             Next
           </Button>
         </div>

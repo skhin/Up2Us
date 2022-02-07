@@ -5,15 +5,58 @@
 }
 
 .diet_card {
-  background: #a23efd;
+  background: #fb7f00;
   border-radius: 20px;
   padding: 30px;
   text-align: center;
-  margin: 0 30px;
+  margin-top: 50px;
+  width: 80%;
 }
 
 .diet_card h1 {
   text-transform: uppercase;
-  color: white;
+  color: #090043;
   padding-bottom: 35px;
+}
+
+.diet_btn {
+  font-size: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+}
+
+.diet_btn:hover {
+  background-color: rgb(116, 116, 212);
+  color: wheat;
+}
+
+.img_restriction {
+  width: fit-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: center;
+  /* width: 100px; */
+  /* height: 100px; */
+  object-fit: cover;
+}
+
+.img_delicious {
+  width: fit-content;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  float: center;
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.img_noEat {
+  width: fit-content;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  float: center;
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
 }

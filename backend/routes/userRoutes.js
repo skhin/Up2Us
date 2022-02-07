@@ -5,7 +5,8 @@ const {
   removeFromHistory,
   getHistory,
   addReview,
-  getDietRest,
+  // getDietRest,
+  getOptions,
   dietRestriction,
   favCuisine,
   getFavCuisine,
@@ -17,23 +18,23 @@ const {
   getBlacklist,
 } = require("../controllers/userSetting");
 
-router.post("/history/addhistory", addHistory);
-router.post("/history/removefromhistory", removeFromHistory);
-router.get("/history/gethistory/:id", getHistory);
-router.post("/history/addreview", addReview);
+router.post("/history/addhistory", addHistory); //  able to read
+router.post("/history/removefromhistory", removeFromHistory); // not receiving
+router.get("/history/gethistory/:id", getHistory); // able to read
+router.post("/history/addreview", addReview); // pass
 
-router.post("/user/getdietrestriction", getDietRest);
-router.post("/user/dietrestriction", dietResriction);
+router.get("/user/getoption/:id", getOptions); //[];
+router.post("/user/dietrestriction", dietRestriction); // able to read
 
-router.post("/user/favcuisine", favCuisine);
-router.get("/user/getfavcuisine/:id", getFavCuisine);
-router.post("/user/nonfavcuisine", nonFavCuisine);
-router.get("/user/getnonfavcuisine/:id", getNonFavCuisine);
+router.post("/user/favcuisine", favCuisine); // pass
+router.get("/user/getfavcuisine/:id", getFavCuisine); // []
+router.post("/user/nonfavcuisine", nonFavCuisine); // pass
+router.get("/user/getnonfavcuisine/:id", getNonFavCuisine); // []
 
-router.post("/user/favlocation", favLocation);
-router.get("/user/favestab/:id", favEstab);
+router.post("/user/favlocation", favLocation); // able to read
+router.get("/user/favestab/:id", favEstab); // []
 
-router.post("/user/blacklist", blacklist);
-router.get("/user/getblacklist/:id", getBlacklist);
+router.post("/user/blacklist", blacklist); // able to read
+router.get("/user/getblacklist/:id", getBlacklist); // []
 
 module.exports = router;

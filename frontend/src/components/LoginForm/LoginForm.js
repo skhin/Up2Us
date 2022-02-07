@@ -6,7 +6,7 @@ import authServ from "../../service/auth";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
-  const history = useHistory;
+  const history = useHistory();
 
   // MAKING API CALL FOR USER LOGIN
   const handleLogin = async (userInfo) => {
@@ -18,7 +18,7 @@ const LoginForm = () => {
       localStorage.setItem("user", JSON.stringify(user));
       history.push("/");
     } catch (err) {
-      message.err(err);
+      message.error(err);
     } finally {
       setLoading(false);
     }

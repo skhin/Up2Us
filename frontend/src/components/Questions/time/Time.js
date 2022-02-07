@@ -9,6 +9,7 @@ const Time = ({ setQNumber, setEstablishment, establishment }) => {
 
   // MOVE TO NEXT QUESTION
   const handleNextQuestion = () => {
+    console.log(activeTime);
     if (activeTime === 1) {
       setQNumber(4);
       setEstablishment({
@@ -54,7 +55,7 @@ const Time = ({ setQNumber, setEstablishment, establishment }) => {
             <div className="later" onClick={() => setActiveTime(2)}>
               <h1
                 style={{
-                  fontSize: `${activeTime === 2 ? "22px" : "30px"}`,
+                  fontSize: `${activeTime === 2 ? "65px" : "45px"}`,
                   color: `${activeTime === 2 ? "#2ecc71" : ""}`,
                 }}
               >
@@ -81,10 +82,20 @@ const Time = ({ setQNumber, setEstablishment, establishment }) => {
 
         <br />
         <div className="price_btn">
-          <Button onClick={() => setQNumber(2)} type="primary" size="large">
+          <Button
+            className="time_pri"
+            onClick={() => setQNumber(2)}
+            type="primary"
+            size="large"
+          >
             Back
           </Button>
-          <Button onClick={handleNextQuestion} type="primary" size="large">
+          <Button
+            className="time_pri"
+            onClick={handleNextQuestion}
+            type="primary"
+            size="large"
+          >
             Next
           </Button>
         </div>

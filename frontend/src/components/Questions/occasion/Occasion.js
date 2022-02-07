@@ -10,25 +10,25 @@ import occ4 from "../../../assets/images/occ4.png";
 const occasionData = [
   {
     id: 1,
-    img: { occ1 },
+    img: occ1,
     title: "Family / Kid-Friendly",
     val: "Family",
   },
   {
     id: 2,
-    img: { occ2 },
+    img: occ2,
     title: "Friendly Get-Together",
     val: "Friends",
   },
   {
     id: 3,
-    img: { occ3 },
+    img: occ3,
     title: "Romantic / Date Night",
     val: "Romantic",
   },
   {
     id: 4,
-    img: { occ4 },
+    img: occ4,
     title: "Work / Colleagues",
     val: "Work",
   },
@@ -45,6 +45,7 @@ const Occasion = ({ setQNumber, establishment, setEstablishment }) => {
 
   // MOVE TO NEXT QUESTION
   const handleNextQuestion = () => {
+    console.log(activeItem);
     if (activeItem) {
       setQNumber(2);
     } else {
@@ -66,10 +67,11 @@ const Occasion = ({ setQNumber, establishment, setEstablishment }) => {
             onClick={() => handleOption(item)}
             style={{
               width: `${activeItem === item.id ? "590px" : "600px"}`,
+              color: `${activeItem === item.id ? "#2ecc71" : ""}`,
             }}
           >
             <img
-              width={`${activeItem === item.id ? "190px" : "200px"}`}
+              width={`${activeItem === item.id ? "390px" : "217px"}`}
               height="100px"
               src={item.img}
               alt="occ1"
@@ -82,7 +84,12 @@ const Occasion = ({ setQNumber, establishment, setEstablishment }) => {
           </div>
         ))}
         <br />
-        <Button onClick={handleNextQuestion} type="primary" size="large">
+        <Button
+          className="occ_btn"
+          onClick={handleNextQuestion}
+          type="primary"
+          size="large"
+        >
           Next
         </Button>
       </div>

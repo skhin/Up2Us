@@ -4,6 +4,8 @@ const app = express();
 require("dotenv").config();
 require("./config/db");
 
+const cors = require("cors");
+
 const authRoutes = require("./routes/authRoute");
 const restaurantRoutes = require("./routes/restaurantRoutes");
 const userSettingRoutes = require("./routes/userRoutes");

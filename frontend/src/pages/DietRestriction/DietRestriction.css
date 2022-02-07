@@ -49,3 +49,16 @@
 .ant-checkbox + span {
   color: white;
 }
+
+.diet_btn {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 10px 60px 10px 60px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+.diet_btn:hover {
+  background-color: rgb(116, 116, 212);
+  color: wheat;
+}
