@@ -11,3 +11,9 @@ Lives torn to tatters .....
 
 But what if there was something that can help you take that stress away.
 Up2Us helps solve one of the worlds greatest problems all with just a few questions.
+
+TECHNOLOGIES USED
+FRONT END: HTML, CSS, JAVASCRIPT, REACT
+UI FRAMEWORK: ANTD
+
+BACKEND: MONGODB, EXPRESS, NODEJS, NONSQL
