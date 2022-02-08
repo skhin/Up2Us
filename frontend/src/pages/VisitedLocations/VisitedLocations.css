@@ -1,6 +1,6 @@
 .user_setting .title h1 {
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 40px;
   margin: 20px;
 }
 
@@ -20,7 +20,7 @@
 .location h1 {
   text-transform: uppercase;
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .add_review .ant-btn {

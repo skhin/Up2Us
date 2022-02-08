@@ -3,7 +3,7 @@ import "./VisitedLocations.css";
 import { Input, Button, message } from "antd";
 import historyServ from "../../service/userSetting";
 import Loader from "../../components/Loader/Loader";
-import { StarFilled, CloseOutlined } from "@ant-design/icons";
+import { HeartFilled, StarFilled, CloseOutlined } from "@ant-design/icons";
 
 const VisitedLocations = () => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -89,30 +89,33 @@ const VisitedLocations = () => {
         ) : (
           userHistory.reverse().map((item) => (
             <div key={item.restId} className="location">
-              <h1>{item.name}</h1>
+              <h1 className="rest_name">{item.name}</h1>
+              <br />
               <div
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
-                  fontSize: "25px",
+                  fontSize: "35px",
                 }}
               >
                 <div
-                  style={{ color: "yellow", cursor: "pointer" }}
+                  style={{ color: "red", cursor: "pointer" }}
                   onClick={() => addToFavLocation(item)}
                 >
-                  <StarFilled />
+                  <HeartFilled className="heart" />
                 </div>
                 <div
-                  style={{ color: "tomato", cursor: "pointer" }}
+                  style={{ color: "black", cursor: "pointer" }}
                   onClick={() => addToBlacklist(item)}
                 >
                   <CloseOutlined />
                 </div>
               </div>
+              <br />
               <Input.TextArea
                 onChange={(e) => setReview(e.target.value)}
                 placeholder="Add Review"
+                className="review"
               />
               <br />
               <br />
