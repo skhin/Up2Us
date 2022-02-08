@@ -9,7 +9,7 @@ function removeFromHistory(data) {
 }
 
 function getHistory(id) {
-  return axios.get(`history/gethistory${id}`);
+  return axios.get(`history/gethistory/${id}`);
 }
 
 function addReview(data) {

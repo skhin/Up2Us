@@ -15,7 +15,10 @@ const VisitedLocations = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
+        console.log("hello");
+        console.log(user._id);
         const res = await historyServ.getHistory(user._id);
+        console.log(res);
         setUserHistory(res);
       } catch (error) {
         console.log(error);

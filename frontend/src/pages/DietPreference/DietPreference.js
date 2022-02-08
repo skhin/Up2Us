@@ -28,7 +28,7 @@ const DietPreference = () => {
           </h1>
           <Button
             className="diet_btn"
-            onClick={() => history.push("/dietaryrestriction")}
+            onClick={() => history.push("/dietrestriction")}
           >
             Get Started
           </Button>

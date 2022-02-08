@@ -14,9 +14,9 @@ const DiningHistory = () => {
   return (
     <div className="user_setting">
       <div className="title">
-        <h1>{user.userName} Profile - Dining history</h1>
+        <h1>{user.userName} Profile - Dining History</h1>
       </div>
-      <Row>
+      <Row justify="center" align="middle" className="userOptions">
         <Col span={16}>
           <Row justify="space-between">
             <Col
@@ -24,7 +24,7 @@ const DiningHistory = () => {
               sm={4}
               md={6}
               lg={11}
-              xl={11}
+              xl={13}
               onClick={() => history.push("/visitedlocation")}
               className="dining_history"
             >
@@ -37,9 +37,9 @@ const DiningHistory = () => {
               sm={4}
               md={6}
               lg={11}
-              xl={11}
+              xl={13}
               onClick={() => history.push("/favestab")}
-              className="dinning_history"
+              className="dining_history"
             >
               <h1>Favourite Establishment</h1>
               <img src={thumbsUp} alt="history" className="thumbsUp" />
@@ -50,7 +50,7 @@ const DiningHistory = () => {
               sm={4}
               md={6}
               lg={11}
-              xl={11}
+              xl={13}
               onClick={() => history.push("/blacklist")}
               className="dining_history"
             >

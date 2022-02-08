@@ -37,7 +37,7 @@ const UserPage = () => {
               lg={11}
               xl={11}
               onClick={() => history.push("/dininghistory")}
-              className="dinning_history"
+              className="dining_history"
             >
               <h1>Dining History</h1>
               <img src={historyImg} alt="history" />

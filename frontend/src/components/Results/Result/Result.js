@@ -135,7 +135,6 @@ const Result = ({ restaurant, setResult, quesAns }) => {
               onClick={handleEstablishment}
               type="primary"
               size="large"
-              handleEstablishment={handleEstablishment}
             >
               Select this <br /> establishment
             </Button>

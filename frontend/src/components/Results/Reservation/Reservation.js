@@ -39,7 +39,7 @@ const Reservation = ({ restaurant, quesAns }) => {
             <p className="res-status">
               Your reservation has been confirmed at {restaurant.name}.
               <br />
-              Please arrive 10min before the scheduled time
+              Please arrive 10 min before the scheduled time
             </p>
           )}
           <br />
