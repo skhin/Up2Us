@@ -62,7 +62,12 @@ const ContactUs = () => {
 
             <Col xs={24} sm={24} md={10} lg={24} xl={24}>
               <Form.Item>
-                <Button size="large" type="primary" htmlType="submit">
+                <Button
+                  size="large"
+                  type="primary"
+                  htmlType="submit"
+                  className="submit"
+                >
                   Submit
                 </Button>
               </Form.Item>

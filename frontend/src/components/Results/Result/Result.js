@@ -99,7 +99,9 @@ const Result = ({ restaurant, setResult, quesAns }) => {
         <h1>Your Result</h1>
         <div className="review">
           <p> Reviews from Visitors</p>
-          <span>{restaurant.review ? restaurant.review : "no review"}</span>
+          <span>
+            {restaurant.review ? restaurant.review : "No reviews at the moment"}
+          </span>
         </div>
       </div>
 

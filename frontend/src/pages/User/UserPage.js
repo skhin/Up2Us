@@ -12,7 +12,7 @@ const UserPage = () => {
   return (
     <div className="container userPage">
       <div className="title">
-        <h1>{user.userName} Profile Page</h1>
+        <h1 className="user__title">{user.userName} Profile Page</h1>
       </div>
 
       <Row justify="center" align="middle" className="userOption">
@@ -37,10 +37,10 @@ const UserPage = () => {
               lg={11}
               xl={11}
               onClick={() => history.push("/dininghistory")}
-              className="dining_history"
+              className="diet_preference"
             >
               <h1>Dining History</h1>
-              <img src={historyImg} alt="history" />
+              <img src={historyImg} alt="diet" />
             </Col>
           </Row>
         </Col>

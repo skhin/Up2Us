@@ -245,7 +245,7 @@ const NonFavCuisine = () => {
   return (
     <div className="dietaryRestriction">
       <div className="title">
-        <h1>{user.userName} Profile - NON-FAVOURITE CUISINES </h1>
+        <h1>{user.userName} Profile - Non-Favourite Cuisines </h1>
       </div>
 
       <div className="dietHeader">

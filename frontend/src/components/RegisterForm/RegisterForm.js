@@ -12,16 +12,18 @@ const RegisterForm = () => {
   const onFinish = async ({ userName, email, password }) => {
     setLoading(true);
     try {
-      await authServ.signup({ userName, email, password }).then((result) => {
-        console.log('result', result)
-         return authServ.signin({email, password});
-      }).then((result1) => {
-        console.log('result1', result1)
-        localStorage.setItem('token', result1.token)
-        localStorage.setItem('user', JSON.stringify(result1.user))
-        history.push("/usersetting");
-
-      });
+      await authServ
+        .signup({ userName, email, password })
+        .then((result) => {
+          console.log("result", result);
+          return authServ.signin({ email, password });
+        })
+        .then((result1) => {
+          console.log("result1", result1);
+          localStorage.setItem("token", result1.token);
+          localStorage.setItem("user", JSON.stringify(result1.user));
+          history.push("/usersetting");
+        });
     } catch (err) {
       message.error(err);
     } finally {
@@ -38,6 +40,7 @@ const RegisterForm = () => {
             onFinish={onFinish}
             autoComplete="off"
             layout="vertical"
+            className="register__form"
           >
             <h1>REGISTER</h1>
             <Form.Item

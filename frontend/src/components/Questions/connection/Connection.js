@@ -7,9 +7,9 @@ const Connection = ({ setQNumber, establishment, setEstablishment }) => {
   const history = useHistory();
 
   return (
-    <Row className="connection_page containter">
+    <Row className="connection_page container">
       <div className="heading">
-        <h1>Question 4: CONNECTIONS</h1>
+        <h1>Question 4: Connections</h1>
       </div>
       <Col xs={2} sm={4} md={6} lg={8} xl={12} className="connection_container">
         <div className="conn_title">

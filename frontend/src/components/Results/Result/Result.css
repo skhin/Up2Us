@@ -61,7 +61,7 @@ p {
 .res_pri {
   font-size: 20px;
   text-transform: uppercase;
-  padding: 10px 60px 10px 60px;
+  padding: 10px 60px 30px 60px;
   margin-top: 40px;
   border-radius: 20px;
 }
@@ -69,4 +69,5 @@ p {
 .res_pri:hover {
   background-color: rgb(116, 116, 212);
   color: wheat;
+  font-size: 20px;
 }

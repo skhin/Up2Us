@@ -16,8 +16,8 @@ const DietPreference = () => {
         <h1>{user.userName} Profile - DIETARY RESTRICTIONS & PREFERENCES</h1>
       </div>
 
-      <Row justify="center">
-        <Col xs={2} sm={4} md={6} lg={8} xl={4} className="diet_card">
+      <Row justify="center" className="diet__row">
+        <Col xs={8} sm={16} md={24} lg={32} className="diet_card">
           <img
             src={Restriction}
             className="img_restriction"
@@ -33,7 +33,8 @@ const DietPreference = () => {
             Get Started
           </Button>
         </Col>
-        <Col xs={2} sm={4} md={6} lg={8} xl={4} className="diet_card">
+
+        <Col xs={8} sm={16} md={24} lg={32} className="diet_card">
           <img src={Delicious} className="img_delicious" alt="Delicious" />
           <h1>
             Favourite <br /> Cuisine
@@ -45,7 +46,8 @@ const DietPreference = () => {
             Get Started
           </Button>
         </Col>
-        <Col xs={2} sm={4} md={6} lg={8} xl={4} className="diet_card">
+
+        <Col xs={8} sm={16} md={24} lg={32} className="diet_card">
           <img src={noEat} className="img_noEat" alt="noEat" />
           <h1>
             Non-Favourite <br /> Cuisine

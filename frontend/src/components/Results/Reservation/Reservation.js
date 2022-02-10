@@ -43,13 +43,15 @@ const Reservation = ({ restaurant, quesAns }) => {
             </p>
           )}
           <br />
-          <p>{restaurant.name}</p>
-          <p>{restaurant.address}</p>
+          <p className="rest__name">{restaurant.name}</p>
+          <p className="rest__add">{restaurant.address}</p>
           <p>
-            <strong>Time: </strong> {quesAns.time}
+            <strong>Time: </strong>{" "}
+            <span className="quesAns">{quesAns.time}</span>
           </p>
           <p>
-            <strong>Total Pax: </strong> {quesAns.totalPax}
+            <strong>Total Pax: </strong>{" "}
+            <span className="quesAns">{quesAns.totalPax}</span>
           </p>
           <br />
           {isCancel ? (

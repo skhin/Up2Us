@@ -44,7 +44,9 @@ const Blacklist = () => {
               className="location"
             >
               <h1>{item.loc}</h1>
-              <p>{item.add}</p>
+              <p>
+                ADDRESS: <span className="add">{item.add}</span>
+              </p>
             </div>
           ))
         )}

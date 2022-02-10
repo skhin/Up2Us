@@ -19,6 +19,16 @@
 .contact_us form .ant-input {
   background: #ddd;
   font-size: 20px;
-  width: 100%;
+  width: 50vw;
   margin-bottom: 20px;
+}
+
+.submit {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.submit:hover {
+  background-color: navy;
+  color: orangered;
 }

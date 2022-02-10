@@ -11,16 +11,17 @@
 }
 
 .description h1 {
-  font-size: 40px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .home_top img {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 350px;
 }
 
 .home_bottom img {
-  width: 350px;
+  width: 450px;
   height: 250px;
 }
 
@@ -51,4 +52,8 @@
 .home__btn:hover {
   background-color: rgb(116, 116, 212);
   color: wheat;
+}
+
+p {
+  color: whitesmoke;
 }

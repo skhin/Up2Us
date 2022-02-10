@@ -8,7 +8,9 @@ const Header = () => {
     <div className="header">
       <div className="container headerMenu">
         <div className="logo">
-          <img width="50px" src={Logo} alt="logo" />
+          <a href="/">
+            <img width="80px" src={Logo} alt="logo" />
+          </a>
         </div>
 
         <ul>

@@ -44,7 +44,9 @@ const FavEstablishment = () => {
               className="location"
             >
               <h1>{item.loc}</h1>
-              <p>{item.add}</p>
+              <p>
+                ADDRESS: <span>{item.add}</span>
+              </p>
             </div>
           ))
         )}

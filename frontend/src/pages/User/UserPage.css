@@ -1,6 +1,7 @@
 .userPage .title h1 {
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 40px;
+  padding-top: 40px;
   margin: 20px;
 }
 

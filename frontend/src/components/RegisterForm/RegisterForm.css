@@ -30,6 +30,13 @@
 .register-button {
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.register-button:hover {
+  background-color: navy;
+  color: orangered;
 }
 
 .email,

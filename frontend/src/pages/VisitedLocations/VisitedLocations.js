@@ -3,7 +3,7 @@ import "./VisitedLocations.css";
 import { Input, Button, message } from "antd";
 import historyServ from "../../service/userSetting";
 import Loader from "../../components/Loader/Loader";
-import { HeartFilled, StarFilled, CloseOutlined } from "@ant-design/icons";
+import { HeartFilled, CloseOutlined } from "@ant-design/icons";
 
 const VisitedLocations = () => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -81,14 +81,14 @@ const VisitedLocations = () => {
   return (
     <div className="user_setting container">
       <div className="title">
-        <h1>{user.userName} Profile Page - Visited Locations</h1>
+        <h1>{user.userName} Profile - Visited Locations</h1>
       </div>
       <div className="locationWrap">
         {isLoading ? (
           <Loader />
         ) : (
           userHistory.reverse().map((item) => (
-            <div key={item.restId} className="location">
+            <div key={item.restId} className="location site-card-wrapper">
               <h1 className="rest_name">{item.name}</h1>
               <br />
               <div
@@ -97,6 +97,7 @@ const VisitedLocations = () => {
                   justifyContent: "space-between",
                   fontSize: "35px",
                 }}
+                className="icons"
               >
                 <div
                   style={{ color: "red", cursor: "pointer" }}
@@ -119,7 +120,11 @@ const VisitedLocations = () => {
               />
               <br />
               <br />
-              <Button type="primary" onClick={() => submitReview(item.restId)}>
+              <Button
+                type="primary"
+                onClick={() => submitReview(item.restId)}
+                className="submit_review"
+              >
                 Submit
               </Button>
             </div>
