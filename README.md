@@ -40,12 +40,33 @@ For the frontend, I chose to work with ANTD as I wanted to try a new design fram
 I had 3 major categories to build for my backend to ensure my frontend was working.
 
 1. Authentication - to authenticate users whilst registering, logging in and logging out
+
+<img width="982" alt="Screenshot 2022-02-10 at 1 06 42 PM" src="https://user-images.githubusercontent.com/88125976/153341103-f95a92f0-4b81-4e7c-b9c4-94aa773e020a.png">
+
+<img width="745" alt="Screenshot 2022-02-10 at 1 07 03 PM" src="https://user-images.githubusercontent.com/88125976/153341143-1e6c87ab-1392-44ca-8af4-b9387f2980b8.png">
+
+<img width="628" alt="Screenshot 2022-02-10 at 1 09 53 PM" src="https://user-images.githubusercontent.com/88125976/153341452-278c84b6-80b1-4238-92a7-2c757a5517a0.png">
+
+<img width="761" alt="Screenshot 2022-02-10 at 1 10 13 PM" src="https://user-images.githubusercontent.com/88125976/153341479-2f9d5034-0a89-4673-b585-984793c68aab.png">
+
 2. User Settings - this will store all the user data from their fav/non-fav cuisines, dietary restrictions, visited locations, etc
+
+<img width="612" alt="Screenshot 2022-02-10 at 1 12 07 PM" src="https://user-images.githubusercontent.com/88125976/153341680-4434717d-29f9-44e1-887a-1a9788c1554a.png">
+(Unfortunately it is too long to screenshot, so the pic above shows how it would be used to fetch from the backend to frontend)
+
 3. Restaurant Settings - this will store all the restaurants data and aid in the filtering process during the front end call.
+
+<img width="788" alt="Screenshot 2022-02-10 at 1 13 51 PM" src="https://user-images.githubusercontent.com/88125976/153341871-35f0cc61-f2e3-4001-af2d-a2d23d0ffdbb.png">
+
 
 ## FRONTEND
 
 Several components and pages were built to ensure that the users will get the full experience. Again it targeted the 3 main categories of Authentication, User Settings and Meal Settings.
+
+Majority of the paths would be placed in a protected/private route/path as the sign-ins would need to be validated before the users are allowed to continue
+
+<img width="678" alt="Screenshot 2022-02-10 at 1 15 49 PM" src="https://user-images.githubusercontent.com/88125976/153342099-4d8786f3-40f3-4ace-b395-bc42ab15488c.png">
+<img width="494" alt="Screenshot 2022-02-10 at 1 16 07 PM" src="https://user-images.githubusercontent.com/88125976/153342138-ddf5a515-15ac-4d09-9059-ba941fa474ae.png">
 
 ---
 
