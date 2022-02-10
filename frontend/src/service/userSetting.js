@@ -45,7 +45,7 @@ function favLocation(data) {
 }
 
 function favEstab(id) {
-  return axios.get(`user/faveestab${id}`);
+  return axios.get(`user/favestab${id}`);
 }
 
 function blacklist(data) {

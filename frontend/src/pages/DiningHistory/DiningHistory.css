@@ -22,6 +22,7 @@
   background: #e67e22;
   margin-top: 30px;
   border-radius: 20px;
+  transition: transform 0.2s;
 }
 
 .dining_history h1 {
@@ -57,4 +58,8 @@
   margin-right: 30px;
   justify-content: space-between;
   margin-top: 50px;
+}
+
+.dining_history:hover {
+  transform: scale(1.1);
 }
