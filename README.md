@@ -64,9 +64,11 @@ I had 3 major categories to build for my backend to ensure my frontend was worki
 Several components and pages were built to ensure that the users will get the full experience. Again it targeted the 3 main categories of Authentication, User Settings and Meal Settings.
 
 Majority of the paths would be placed in a protected/private route/path as the sign-ins would need to be validated before the users are allowed to continue
+<img width="494" alt="Screenshot 2022-02-10 at 1 16 07 PM" src="https://user-images.githubusercontent.com/88125976/153342138-ddf5a515-15ac-4d09-9059-ba941fa474ae.png">
+(Protected Route for Register and LogIn)
 
 <img width="678" alt="Screenshot 2022-02-10 at 1 15 49 PM" src="https://user-images.githubusercontent.com/88125976/153342099-4d8786f3-40f3-4ace-b395-bc42ab15488c.png">
-<img width="494" alt="Screenshot 2022-02-10 at 1 16 07 PM" src="https://user-images.githubusercontent.com/88125976/153342138-ddf5a515-15ac-4d09-9059-ba941fa474ae.png">
+(Private Route for when users have logged in. For non users, they would not be able to access the pages)
 
 ---
 
