@@ -4,10 +4,14 @@
   "description": "An app that helps solve the most annoying question of all time",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "backend": "nodemon backend/server.js",
+    "frontend": "npm run front -- prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run start -- prefix frontend\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sireena Khin",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^7.0.0"
