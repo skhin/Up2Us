@@ -5,15 +5,29 @@
   "main": "index.js",
   "scripts": {
     "start": "node backend/server.js",
-    "backend": "nodemon backend/server.js",
-    "frontend": "npm run front -- prefix frontend",
-    "dev": "concurrently \"npm run backend\" \"npm run start -- prefix frontend\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "cd frontend/ && npm install && npm run build"
   },
-  "keywords": [],
+  "cacheDirectories": [
+    "node_modules",
+    "frontend/node_modules"
+  ],
   "author": "Sireena Khin",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "express": "^4.17.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/up2us-app.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

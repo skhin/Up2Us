@@ -1,0 +1,17 @@
+{
+  "name": "up2us",
+  "description": "web app made of create-react-app frontend + Node API",
+  "scripts": {},
+  "env": {},
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
