@@ -12,5 +12,6 @@ mongoose
     console.log("Database connected to Mongo");
   })
   .catch((err) => {
-    console.log('db err', err);
-    console.log("Database not connected to Mongo")});
+    console.log("db err", err);
+    console.log("Database not connected to Mongo");
+  });
